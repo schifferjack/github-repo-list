@@ -10,7 +10,7 @@ function App() {
     queryFn: fetchGithubList,
     getNextPageParam: (lastPage, allPages) => {
       const maxPages = Math.ceil(lastPage.total_count / 30);
-      const nextPage = allPages.length;
+      const nextPage = allPages.length + 1;
       return nextPage <= maxPages ? nextPage : undefined;
     },
     initialPageParam: 1,
